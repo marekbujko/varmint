@@ -40,3 +40,26 @@ Proton 10.0
 DirectX 11
 Neptune
 ```
+
+## Known issues
+
+### Fullscreen resolutions missing in the launcher
+
+On displays with non-standard aspect ratios, the Skyrim launcher may only offer the native resolution in fullscreen mode.
+
+To force 1920×1200 fullscreen, run this in the VM terminal:
+
+```bash
+PREFS="$HOME/.local/share/Steam/steamapps/compatdata/489830/pfx/drive_c/users/steamuser/Documents/My Games/Skyrim Special Edition/SkyrimPrefs.ini"
+
+cp "$PREFS" "$PREFS.bak"
+
+sed -i \
+  -e 's/^bFull Screen=.*/bFull Screen=1/' \
+  -e 's/^bBorderless=.*/bBorderless=0/' \
+  -e 's/^iSize W=.*/iSize W=1920/' \
+  -e 's/^iSize H=.*/iSize H=1200/' \
+  "$PREFS"
+```
+
+Launch Skyrim without reopening the launcher's graphics options, as they may overwrite these settings.
