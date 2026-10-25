@@ -5,7 +5,7 @@
 # varmint
 Varmint is a lightweight virtual machine for Macs, built on top of Hypervisor.framework.
 
-The current focus is gaming and hardware-accelerated graphics. It boots a Debian arm64 guest with FEX, Steam and Proton, making it possible to run Windows and Linux games on Mac.
+The current focus is gaming. It runs Linux with hardware-accelerated graphics, making it possible to play Windows and Linux games on Apple Silicon Macs.
 
 It supports two graphics backends: Venus for Vulkan and Neptune for DirectX.
 
@@ -36,7 +36,7 @@ It supports two graphics backends: Venus for Vulkan and Neptune for DirectX.
 
 4. Wait for Debian to start, create a user and password, then log in.
 
-5. Open **Applications → Games → Steam**, wait for Steam to finish setting up, then sign in and install a game.
+5. Open Steam, wait for it to finish setting up, then sign in and install a game.
 
 ## Games
 
